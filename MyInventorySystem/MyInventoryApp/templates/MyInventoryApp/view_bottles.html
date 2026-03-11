@@ -1,2 +1,45 @@
 {% extends 'MyInventoryApp/base.html' %}
 {% load static %}
+
+{% block sidebar %}
+
+<li class="list-group-item"><a href="{% url 'view_bottles' %}">View Bottles</a></li>
+<li class="list-group-item"><a href="{% url 'view_supplier' %}">View Suppliers</a></li>
+<li class="list-group-item"><a href="{% url 'add_bottle' %}">Add Bottle</a></li>
+
+{% endblock %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="table-dark">SKU</th>
+            <th class="table-dark">Brand</th>
+            <th class="table-dark">Cost</th>
+            <th class="table-dark">Size</th>
+            <th class="table-dark">Mouth Size</th>
+            <th class="table-dark">Color</th>
+            <th class="table-dark">Supplier</th>
+            <th class="table-dark">Quantity</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for b in bottles %}
+        <tr>
+            <td>{{ b.sku }}</td>
+            <td>{{ b.brand }}</td>
+            <td>{{ b.cost }}</td>
+            <td>{{ b.size }}</td>
+            <td>{{ b.mouth_size }}</td>
+            <td>{{ b.color }}</td>
+            <td>{{ b.supplied_by }}</td>
+            <td>{{ b.current_quantity }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock %}
