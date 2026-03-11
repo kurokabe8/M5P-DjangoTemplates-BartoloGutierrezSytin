@@ -1,0 +1,35 @@
+{% extends 'MyInventoryApp/base.html' %}
+{% load static %}
+
+{% block sidebar %}
+
+<li class="list-group-item"><a href="{% url 'view_bottles' %}">View Bottles</a></li>
+<li class="list-group-item"><a href="{% url 'view_supplier' %}">View Suppliers</a></li>
+<li class="list-group-item"><a href="{% url 'add_bottle' %}">Add Bottle</a></li>
+
+{% endblock %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="table-dark">Name</th>
+            <th class="table-dark">City</th>
+            <th class="table-dark">Country</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for s in suppliers %}
+        <tr>
+            <td>{{ s.name }}</td>
+            <td>{{ s.city }}</td>
+            <td>{{ s.country }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock %}

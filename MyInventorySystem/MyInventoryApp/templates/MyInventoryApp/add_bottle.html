@@ -1,0 +1,82 @@
+{% extends 'MyInventoryApp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Type in Bottle Details:</h3>
+
+    <form>
+
+        <div class="form-group">
+            <label>SKU: </label>
+            <input type="text" name="name" class="form-control">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label>Brand:</label>
+            <input type="text" name="brand" class="form-control">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label>Cost:</label>
+            <input type="number" name="cost" class="form-control" step="0.01">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label>Size:</label>
+            <input type="text" name="size" class="form-control" step="0.01">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label>Mouth Size:</label>
+            <input type="text" name="mouth_size" class="form-control" step="0.01">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label>Color:</label>
+            <input type="text" name="color" class="form-control" step="0.01">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label>Supplied by:</label>
+            <input type="text" name="supplied_by" class="form-control" step="0.01">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label>Quantity:</label>
+            <input type="text" name="quantity" class="form-control" step="0.01">
+        </div>
+
+        <br>
+
+        <button class="btn btn-primary">
+            Add to dishes
+        </button>
+
+    </form>
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+
+<li class="list-group-item"><a href="{% url 'view_bottles' %}">View Bottles</a></li>
+<li class="list-group-item"><a href="{% url 'view_supplier' %}">View Suppliers</a></li>
+<li class="list-group-item"><a href="{% url 'add_bottle' %}">Add Bottle</a></li>
+
+{% endblock %}
