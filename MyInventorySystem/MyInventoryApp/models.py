@@ -11,7 +11,7 @@ class Supplier(models.Model):
         return self.name
     
     def __str__(self):
-        return f'{self.name} - {self.city}, {self.country} created at: {self.created_at}'
+        return f'{self.name} - {self.city}, {self.country}'
 
 class WaterBottle(models.Model):
     sku = models.CharField(max_length=300, unique=True)
