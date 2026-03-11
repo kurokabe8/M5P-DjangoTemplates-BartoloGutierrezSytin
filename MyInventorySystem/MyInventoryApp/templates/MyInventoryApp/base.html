@@ -11,25 +11,34 @@
 
         <style>
             
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-                margin: 0;
-            }
+        html, body {
+            height: 100%; 
+            margin: 0;
+            position: relative; 
+            min-height: 100vh;
+            padding-bottom: 6rem; 
+        }
+        body {
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh; 
+        }
+        main {
+            flex-grow: 1; 
 
-            .main-wrapper {
-                flex: 1 0 auto; 
-            }
+        }
+        footer {
+           position: absolute;
+            bottom: 0;
+            height: 6rem; 
+            width: 100%;
+        }
 
-            .footer {
-                flex-shrink: 0;
-                padding: 10px;
-            }
+        .table-container {
+            height: 500px;
+            overflow: auto; 
+        }
 
-            .bg-custom {
-                background-color: #590404 !important;
-            }
         </style>
         
     </head>
