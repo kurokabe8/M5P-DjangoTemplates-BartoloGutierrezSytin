@@ -10,7 +10,7 @@
         <script src="{% static '/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
         
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <nav class="navbar navbar-dark bg-custom mb-3 sticky-top" style="background-color: #590404;">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0" href="{% url 'view_bottles' %}">My Inventory</span> </a>
@@ -44,10 +44,10 @@
             </div>
         </div>  
         
-        <footer class="footer bg-custom" style="background-color: #590404;">
+        <footer class="footer bg-custom mt-auto" style="background-color: #590404;">
 
             <!-- Copyright -->
-            <div class="container">&copy; 2020</div>
+            <div class="container text-center text-white py-2">&copy; 2020</div>
             <!-- Copyright -->
           
         </footer>
