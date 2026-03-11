@@ -34,7 +34,7 @@
             <td>{{ b.size }}</td>
             <td>{{ b.mouth_size }}</td>
             <td>{{ b.color }}</td>
-            <td>{{ b.supplied_by }}</td>
+            <td>{{ b.supplied_by.name }} - {{ b.supplied_by.city }}, {{ b.supplied_by.country }}</td>
             <td>{{ b.current_quantity }}</td>
         </tr>
         {% endfor %}
